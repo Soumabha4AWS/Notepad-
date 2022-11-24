@@ -1,0 +1,25 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ListComponent } from './component/list/list.component';
+import { CreateupdateComponent } from './component/createupdate/createupdate.component';
+import { UpdateComponent } from './component/update/update.component';
+import { DeleteComponent } from './component/delete/delete.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { ConfirmComponent } from './component/confirm/confirm.component';
+import { WelcomeComponent } from './component/welcome/welcome.component';
+
+const appRoutes : Routes = [
+  {path : 'angularCrudProject/get' , component : WelcomeComponent},
+  {path : 'angularCrudProject/get/welcomeCourses' , component : WelcomeComponent},
+  {path : 'angularCrudProject/get/viewAllCourses' , component : ListComponent},
+  {path : 'angularCrudProject/get/addCourses' , component : CreateupdateComponent},
+  {path : 'angularCrudProject/get/editCourses' , component : UpdateComponent},
+  {path : 'angularCrudProject/get/removeCourses' , component : DeleteComponent},  
+  {path : 'angularCrudProject/get/confirmCourses' , component : ConfirmComponent}
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
